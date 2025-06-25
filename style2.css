@@ -1,0 +1,543 @@
+body {
+  margin: 0; /* Eliminar márgenes del body */
+    background-color: white; /* Ajustar el color de fondo según sea necesario */
+  color: white; /* Color del texto */
+  font-family: helvetica, sans-serif;
+  transition: background-color 0.5s, color 0.5s; /* Transición suave */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header {
+      flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+      align-items: flex-start; /* Alinear a la izquierda */
+  }
+
+  .logo {
+      margin-bottom: 10px; /* Espacio entre el logo y la navegación */
+  }
+
+  .logo h1 {
+      font-size: 24px; /* Reducir el tamaño del título */
+  }
+
+  .logo p {
+      font-size: 16px; /* Reducir el tamaño del subtítulo */
+  }
+
+  nav ul {
+      flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+      align-items: flex-start; /* Alinear a la izquierda */
+  }
+
+  nav ul li {
+      margin: 5px 0; /* Espaciado vertical entre los elementos del menú */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo h1 {
+      font-size: 20px; /* Reducir aún más el tamaño del título */
+  }
+
+  .logo p {
+      font-size: 14px; /* Reducir aún más el tamaño del subtítulo */
+  }
+
+  .btn {
+      padding: 8px 12px; /* Ajustar el tamaño del botón */
+  }
+}
+
+body.light {
+  background-color: white;
+  color: black;
+}
+
+body.dark {
+  background-color: black;
+  color: white;
+}
+
+header {
+  display: flex; /* Usar flexbox para alinear elementos en una sola línea */
+  justify-content: space-between; /* Espacio entre logo y navegación */
+  align-items: center; /* Alinear verticalmente */
+  background: linear-gradient(to bottom, #262624, #725697); /* Degradado de naranja a amarillo a café */
+  color: #FFD700; /* Texto dorado en el header */
+  padding: 10px 10px; /* Reducir el padding para hacer el header menos alto */
+  position: fixed; /* Mantener el header fijo al hacer scroll */
+  width: 100%; /* Asegurarse de que cubra todo el ancho */
+  z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+}
+
+
+.logo {
+  display: flex;
+  align-items: center; /* Alinear verticalmente */
+}
+
+.logo img {
+  height: 60px; /* Ajustar la altura del logo */
+  margin-right: 15px; /* Espaciado a la derecha del logo */
+}
+
+.logo h1 {
+  margin: 0; /* Eliminar márgenes para alinear correctamente */
+  font-size: 24px; /* Aumentar el tamaño */
+  font-family: 'Cinzel', serif; /* Fuente mágica para el título */
+  color: #FFD700; /* Color dorado para el título */
+  text-decoration: none; /* Eliminar subrayado */
+}
+
+.logo p {
+  margin: 0; /* Eliminar márgenes para alinear correctamente */
+  font-size: 18px; /* Aumentar el tamaño */
+  font-family: 'Lobster', cursive; /* Fuente mágica para el subtítulo */
+  color: #FFD700; /* Color dorado para el subtítulo */
+  text-decoration: none; /* Eliminar subrayado */
+  
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end; /* Alinear elementos a la derecha */
+  align-items: center; /* Alinear verticalmente */
+  margin-left: auto; /* Asegurarse de que el nav ocupe el espacio restante */
+}
+
+nav ul {
+  list-style: none; /* Eliminar viñetas */
+  display: flex;
+  align-items: center;
+  margin: 0; /* Eliminar márgenes */
+  padding: 0; /* Eliminar padding */
+}
+
+nav a {
+  color: white; /* Color de los enlaces */
+  text-decoration: none; /* Eliminar subrayado */
+}
+
+nav ul li {
+  margin-left: 15px; /* Espaciado entre los elementos de la navegación */
+  font-size: 18px; /* Aumentar el tamaño de la fuente */
+}
+
+#toggle-theme {
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  color: white; /* Color del icono */
+  font-size: 20px; /* Tamaño del icono */
+  cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+  padding: 5px; /* Espaciado interno para hacer clic más fácil */
+  position: relative; /* Asegurarse de que esté en la posición correcta */
+  z-index: 2; /* Asegurarse de que esté por encima de otros elementos */
+}
+
+
+.btn {
+  background-color: gold;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.icon {
+  font-size: 18px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.hero {
+  background-image: url('images-2/imagen-7.jpg'); /* Cambia esto por la ruta de tu imagen */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* 1/3 de la altura de la ventana */
+  display: flex;
+  align-items: center;
+  color: white; /* Color del texto */
+  position: relative;
+}
+
+.hero-content {
+  
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%; /* Asegura que el contenido ocupe todo el ancho */
+  max-width: 650px; /* Ancho máximo del contenido */
+  background-color: rgba(19, 36, 56, 0.5); /* Fondo semi-transparente para mejorar la legibilidad */
+}
+
+.hero h2 {
+  margin: 0 0 10px;
+  font-size: 32px;
+  text-align: left; /* Alinear a la izquierda */
+}
+
+.hero p {
+  margin: 0 0 20px;
+  font-size: 18px;
+  text-align: left; /* Alinear a la izquierda */
+}
+
+.chat-btn2 {
+  background-color: rgb(11, 7, 48); /* Color del botón */
+  color: white; /* Color del texto del botón */
+  border: none;
+  padding: 10px 40px; /* Aumentar el padding para hacerlo más largo */
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px; /* Aumentar el tamaño de la fuente */
+  display: flex; /* Para alinear el icono y el texto */
+  align-items: center; /* Centrar verticalmente */
+  transition: background-color 0.3s; /* Transición suave al cambiar de color */
+}
+
+.chat-btn2:hover {
+  background-color: rgb(142, 46, 186); /* Cambiar a un color más oscuro al hacer hover */
+}
+
+.background-section {
+  position: relative; /* Hacer que el contenedor sea relativo */
+  height: 0px; /* Ajustar la altura según sea necesario *
+  background-image: 
+      url('images-2/imagen-7.jpg'), 
+      url('images-2/fondomorado-2.jpg'), 
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)); /* Degradado */
+  background-size: cover; /* Asegurarse de que las imágenes cubran el área */
+  background-position: center; /* Posicionar la primera imagen en la parte superior y la segunda en la parte inferior */
+  background-repeat: no-repeat; /* Evitar que las imágenes se repitan */
+}
+
+.background-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('images-2/imagen-7.jpg');
+  opacity: 0.5; /* Ajustar la opacidad según sea necesario */
+  z-index: 2; /* Asegúrate de que esté detrás del contenido */
+}
+
+.background-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('images-2/fondomorado-2.jpg');
+  opacity: 0.5; /* Ajustar la opacidad según sea necesario */
+  z-index: 2; /* Asegúrate de que esté detrás del contenido */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.3); /* Ajusta el color y la opacidad */
+  z-index: 1; /* Asegúrate de que esté por encima de las imágenes */
+}
+
+
+.oracles {
+  background-image: url('images-2/fondomorado-2.jpg'); /* Cambia esto por la ruta de tu imagen de fondo */
+  background-size: cover; /* Asegúrate de que la imagen cubra el área */
+  background-position: center; /* Centrar la imagen de fondo */
+  padding: 10px; /* Espaciado alrededor de la sección */
+  text-align: center; /* Centrar el texto de la sección */
+  background-color: inherit; /* Hereda el color de fondo del cuerpo */
+  color: inherit; /* Hereda el color del texto del cuerpo */
+  max-width: 1500px; /* Ajusta el ancho máximo según sea necesario */
+  margin: 0 auto; /* Centrar la sección horizontalmente */
+  height: auto; /* Ajustar la altura automáticamente según el contenido */
+}
+
+.oracles h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: aqua;
+}
+
+.oracles p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: aqua;
+}
+
+.oracle-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+  gap: 35px; /* Espacio entre las tarjetas */
+  flex-wrap: wrap; /* Permitir que las imágenes se envuelvan en varias filas */
+  justify-content: space-between; /* Espacio entre las imágenes */
+}
+
+.oracle-card {
+  position: relative;
+  background-color: transparent; /* Hacer el fondo transparente */
+  border-radius: 15px;
+  overflow: hidden; /* Para que el contenido no sobresalga */
+  transition: transform 0.3s; /* Transición suave al hacer hover */
+  width: calc(100% - 0px); /* Ajustar el ancho de cada imagen (4 imágenes por fila) */
+  height: 390px; /* Establecer una altura fija para hacerlas más rectangulares */
+  margin-bottom: 10px; /* Espaciado entre las filas */
+  box-shadow: 0 4px 10px rgba(128, 0, 128, 0.5); /* Sombra morada */
+  transition: box-shadow 0.3s ease; /* Transición suave para la sombra */
+}
+
+  .image-container img:hover {
+    box-shadow: 0 8px 15px rgba(128, 0, 128, 0.7); /* Sombra más intensa al pasar el mouse */
+}
+
+
+.oracle-card:hover {
+  transform: scale(1.05); /* Aumentar el tamaño al hacer hover */
+}
+
+
+.vip-badge {
+  position: absolute;
+  top: 10px; /* Ajustar la posición desde la parte superior */
+  right: 10px; /* Ajustar la posición desde la derecha */
+  background-color: #FFD700; /* Color del cuadro VIP */
+  color: rgb(16, 16, 16); /* Color del texto */
+  padding: 5px;
+  border-radius: 5px;
+  display: flex; /* Usar flexbox para alinear el texto y la corona */
+  align-items: center; /* Alinear verticalmente */
+  font-weight: bold;
+  z-index: 10; /* Asegurarse de que esté por encima de otros elementos */
+}
+
+.vip-badge {
+  height: 20px; /* Ajustar la altura de la corona */
+    width: auto; /* Mantener la proporción de la corona */
+  margin-right: 5px; /* Espaciado entre el ícono de la corona y el texto */
+}
+
+.vip-logo span {
+  margin-right: 5px; /* Espaciado entre el texto y la corona */
+}
+
+.crown-icon {
+  height: 20px; /* Ajustar la altura de la corona */
+  width: auto; /* Mantener la proporción de la corona */
+}
+
+.vip-badge:hover {
+  box-shadow: 0 0 10px gold, 0 0 20px gold; /* Efecto de iluminación dorada */
+}
+
+.oracle-card img {
+  width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+  height: 100%; /* Mantener la proporción de la imagen */
+  transition: transform 0.3s; /* Transición suave al hacer hover */
+}
+
+.oracle-card:hover img {
+  transform: scale(1.1); /* Aumentar el tamaño de la imagen al hacer hover */
+}
+
+.oracle-info {
+  padding: 15px;
+  text-align: center; /* Cambiar a centrar el texto */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad */
+  position: absolute; /* Posicionar sobre la imagen */
+  bottom: 0; /* Alinear al fondo de la tarjeta */
+  width: 100%; /* Asegurarse de que ocupe todo el ancho */
+}
+
+.oracle-info h3 {
+  margin: 0 0 5px;
+  color: white; /* Color del título */
+}
+
+.oracle-info p {
+  margin: 0 0 10px;
+  color: white; /* Color del texto */
+}
+
+.chat-btn {
+  background-color: black; /* Color del botón */
+  color: white; /* Color del texto del botón */
+  border: none;
+  padding: 10px 20px; /* Ajustar el tamaño del botón */
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px; /* Aumentar el tamaño de la fuente */
+  display: inline-flex; /* Para alinear el icono y el texto */
+  align-items: center; /* Centrar verticalmente */
+  transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+.chat-btn:hover {
+  background-color: #6f42a3; /* Cambiar el color de fondo al pasar el mouse */
+}
+.chat-btn .icon {
+  margin-left: 8px; /* Espacio entre el texto y el icono */
+}
+
+footer {
+  background: linear-gradient(to bottom, #262624, #725697); /* Degradado de naranja a amarillo a café */
+  color: white; /* Color del texto */
+  width: 85%; /* O 85% según lo que prefieras */
+  padding: 20px; /* Espaciado alrededor del footer */
+  margin: 20px auto; /* Centrar el footer */
+    text-align: center; /* Centrar el
+    
+  }
+.footer {
+  display: flex; /* Usamos flexbox para alinear el contenido */
+  
+}
+
+.footer-content {
+  display: flex; /* Usamos flexbox para alinear el logo y los íconos */
+  justify-content: space-between; /* Espaciado entre el logo y los íconos */
+  align-items: center; /* Centra verticalmente */
+  margin-bottom: 10px; /* Espaciado inferior para separar de la línea */
+}
+
+.footer-logo {
+  height: 80px; /* Ajusta la altura del logo */
+  margin-right: 40px; /* Aumenta el margen a la derecha del logo */
+}
+
+.social-icons {
+  display: flex; /* Usamos flexbox para alinear los íconos en línea */
+  gap: 25px; /* Espaciado entre los íconos */
+}
+
+.social-icon {
+  background: linear-gradient(to bottom, #dadad4, #FFD700); /* Degradado de naranja a amarillo a café */
+  border-radius: 50%; /* Bordes redondeados para hacerlos circulares */
+  padding: 10px; /* Espaciado interno */
+  display: flex; /* Usamos flexbox para centrar el ícono */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  width: 40px; /* Ancho del ícono */
+  height: 40px; /* Alto del ícono */
+}
+
+.social-icon img {
+  width: 20px; /* Ajusta el tamaño del ícono */
+  height: auto; /* Mantiene la proporción */
+}
+
+.footer-divider {
+  border: none; /* Elimina el borde por defecto */
+  height: 1px; /* Altura de la línea */
+  background-color: white; /* Color de la línea */
+  margin: 10px 0px; /* Margen superior e inferior */
+  width: 100%; /* Ancho de la línea */
+}
+
+.footer-links {
+  display: flex; /* Usamos flexbox para alinear los enlaces en línea */
+  justify-content: space-between; /* Espaciado entre los elementos */
+  width: 100%; /* Asegura que ocupe todo el ancho *
+  margin-top: 20px; 0 auto; /* Centra el contenedor de enlaces */
+  color: white; /* Color del texto */
+  padding-top: 10px; /* Espaciado superior para separar de la línea */
+}
+
+.footer-link-item {
+  flex: 1; /* Cada columna ocupa el mismo espacio */
+  margin: 0 10px; /* Espaciado horizontal entre columnas */
+  text-align: center; /* Centra el texto dentro de cada columna */
+}
+
+.footer-link-item h3 {
+  margin-bottom: 10px; /* Espaciado inferior del encabezado */
+}
+
+.footer-link-item p {
+  margin: 5px 0; /* Espaciado vertical entre párrafos */
+}
+
+.footer-link-item a {
+  color: white; /* Color del texto de los enlaces */
+  text-decoration: none; /* Elimina el subrayado */
+  display: block; /* Hace que cada enlace ocupe toda la línea */
+  margin: 5px 0; /* Espaciado vertical entre los enlaces */
+}
+
+.footer-link-item a:hover {
+  text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+.footer-columns {
+  display: flex; /* Usamos flexbox para crear columnas */
+  justify-content: space-between; /* Espaciado entre las columnas */
+  margin-top: 20px 20px; /* Espaciado superior */
+  color: white; /* Color del texto */
+}
+
+.footer-column {
+  flex: 1; /* Cada columna ocupa el mismo espacio */
+  margin: 0 10px; /* Espaciado horizontal entre columnas */
+}
+
+.footer-column h3 {
+  margin-bottom: 10px; /* Espaciado inferior del encabezado */
+}
+
+.footer-column p {
+  margin: 10px 0; /* Espaciado vertical entre párrafos */
+}
+
+.footer-contact {
+  display: flex; /* Usamos flexbox para alinear el ícono y el texto */
+  align-items: center; /* Centra verticalmente */
+  margin-top: 10px; /* Espaciado superior */
+}
+
+.mail-icon {
+  width: 40px; /* Ajusta el tamaño del ícono del correo */
+  height: auto; /* Mantiene la proporción */
+  margin-right: 5px; /* Espaciado a la derecha del ícono */
+}
+
+.footer-start-links a {
+  color: white; /* Color del texto de los enlaces */
+  text-decoration: none; /* Elimina el subrayado */
+  margin: 5px 0; /* Espaciado vertical entre los enlaces */
+}
+
+.footer-start-links a:hover {
+  text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+.language-link {
+  display: flex; /* Usamos flexbox para alinear la bandera y el texto */
+  align-items: center; /* Centra verticalmente */
+}
+
+.flag-icon {
+  width: 20px; /* Ajusta el tamaño de la bandera */
+  height: auto; /* Mantiene la proporción */
+  margin-right: 5px; /* Espaciado a la derecha de la bandera */
+  margin-top: 10px;
+}
+
+.footer-divider {
+  border: none; /* Elimina el borde por defecto */
+  height: 1px; /* Altura de la línea */
+  background-color: white; /* Color de la línea */
+  margin: 20px 0; /* Margen superior e inferior */
+  width: 100%; /* Ancho de la línea */
+}
+
+.footer-bottom {
+  text-align: center; /* Centra el texto */
+  color: white; /* Color del texto */
+  margin: 10px 0; /* Espaciado superior e inferior */
+}
